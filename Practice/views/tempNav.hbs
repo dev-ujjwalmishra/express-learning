@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBS Template Engine</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: cursive;
+        }
+
+        header{
+            background-color: grey;
+            color: gainsboro;
+            padding: 15px 10px;
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        .logo{
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .nav-links{
+            display: inline-block;
+            padding: 0 30px;
+            font-size: 17px;
+        }
+
+        .user{
+            font-size: 17px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Laila</div>
+            <ul>
+                <li class="nav-links">Home</li>
+                <li class="nav-links">About</li>
+                <li class="nav-links">Services</li>
+                <li class="nav-links">Contact</li>
+            </ul>
+            <div class="user">
+                {{!-- Now we can use variable here which will be replaced with value after processed by template engine --}}
+                {{userName}}
+            </div>
+        </nav>
+    </header>
+</body>
+</html>
